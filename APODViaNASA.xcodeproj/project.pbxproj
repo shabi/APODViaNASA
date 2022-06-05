@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181F0006284B6AC900E4055D /* ApodResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F0005284B6AC900E4055D /* ApodResource.swift */; };
+		181F000D284B6AF900E4055D /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F000B284B6AF900E4055D /* HttpUtility.swift */; };
+		181F000E284B6AF900E4055D /* ApodUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F000C284B6AF900E4055D /* ApodUrls.swift */; };
+		181F0014284B6B1200E4055D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F0013284B6B1200E4055D /* Constants.swift */; };
+		181F001B284B6B9400E4055D /* ApodHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFFF284B6A2900E4055D /* ApodHomeViewModel.swift */; };
+		181F0020284B783000E4055D /* ApodConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 181F001F284B783000E4055D /* ApodConfig.xcconfig */; };
+		181F0037284B7C5C00E4055D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F0036284B7C5C00E4055D /* ImageDownloader.swift */; };
+		181F003C284B7EA000E4055D /* LazyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F003B284B7EA000E4055D /* LazyImage.swift */; };
 		181FFF9A284B54FB00E4055D /* APODViaNASAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFF99284B54FB00E4055D /* APODViaNASAApp.swift */; };
-		181FFF9C284B54FB00E4055D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFF9B284B54FB00E4055D /* ContentView.swift */; };
 		181FFF9E284B54FC00E4055D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181FFF9D284B54FC00E4055D /* Assets.xcassets */; };
 		181FFFA1284B54FC00E4055D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181FFFA0284B54FC00E4055D /* Preview Assets.xcassets */; };
-		181FFFA3284B54FC00E4055D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFA2284B54FC00E4055D /* Persistence.swift */; };
-		181FFFA6284B54FC00E4055D /* APODViaNASA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFA4284B54FC00E4055D /* APODViaNASA.xcdatamodeld */; };
 		181FFFB1284B54FD00E4055D /* APODViaNASATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFB0284B54FD00E4055D /* APODViaNASATests.swift */; };
 		181FFFBC284B54FD00E4055D /* APODViaNASAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFBB284B54FD00E4055D /* APODViaNASAUITests.swift */; };
+		181FFFD6284B566C00E4055D /* NASA APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFD5284B566C00E4055D /* NASA APOD.swift */; };
+		181FFFE0284B59A500E4055D /* ApodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFDF284B59A500E4055D /* ApodRow.swift */; };
+		181FFFE5284B5BD800E4055D /* APOD.json in Resources */ = {isa = PBXBuildFile; fileRef = 181FFFE4284B5BD800E4055D /* APOD.json */; };
+		181FFFEB284B5C7C00E4055D /* BundleDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFEA284B5C7C00E4055D /* BundleDecoder.swift */; };
+		181FFFF4284B5E8D00E4055D /* ApodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFF2284B5E8D00E4055D /* ApodResponse.swift */; };
+		181FFFF5284B5E8D00E4055D /* ApodRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFF3284B5E8D00E4055D /* ApodRequest.swift */; };
+		181FFFFA284B665800E4055D /* APODDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FFFF9284B665800E4055D /* APODDetailView.swift */; };
+		183BB13C284D0A17001F36EE /* ActivitiyIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BB13B284D0A17001F36EE /* ActivitiyIndicatorView.swift */; };
+		183BB141284D1BAA001F36EE /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BB140284D1BAA001F36EE /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181F0005284B6AC900E4055D /* ApodResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApodResource.swift; sourceTree = "<group>"; };
+		181F000B284B6AF900E4055D /* HttpUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		181F000C284B6AF900E4055D /* ApodUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApodUrls.swift; sourceTree = "<group>"; };
+		181F0013284B6B1200E4055D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		181F001F284B783000E4055D /* ApodConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ApodConfig.xcconfig; sourceTree = "<group>"; };
+		181F0036284B7C5C00E4055D /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		181F003B284B7EA000E4055D /* LazyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImage.swift; sourceTree = "<group>"; };
 		181FFF96284B54FB00E4055D /* APODViaNASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APODViaNASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181FFF99284B54FB00E4055D /* APODViaNASAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViaNASAApp.swift; sourceTree = "<group>"; };
-		181FFF9B284B54FB00E4055D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		181FFF9D284B54FC00E4055D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181FFFA0284B54FC00E4055D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		181FFFA2284B54FC00E4055D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		181FFFA5284B54FC00E4055D /* APODViaNASA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = APODViaNASA.xcdatamodel; sourceTree = "<group>"; };
 		181FFFA7284B54FC00E4055D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181FFFAC284B54FD00E4055D /* APODViaNASATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APODViaNASATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181FFFB0284B54FD00E4055D /* APODViaNASATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViaNASATests.swift; sourceTree = "<group>"; };
@@ -49,6 +67,16 @@
 		181FFFB7284B54FD00E4055D /* APODViaNASAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APODViaNASAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181FFFBB284B54FD00E4055D /* APODViaNASAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViaNASAUITests.swift; sourceTree = "<group>"; };
 		181FFFBD284B54FD00E4055D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181FFFD5284B566C00E4055D /* NASA APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NASA APOD.swift"; sourceTree = "<group>"; };
+		181FFFDF284B59A500E4055D /* ApodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodRow.swift; sourceTree = "<group>"; };
+		181FFFE4284B5BD800E4055D /* APOD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APOD.json; sourceTree = "<group>"; };
+		181FFFEA284B5C7C00E4055D /* BundleDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDecoder.swift; sourceTree = "<group>"; };
+		181FFFF2284B5E8D00E4055D /* ApodResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApodResponse.swift; sourceTree = "<group>"; };
+		181FFFF3284B5E8D00E4055D /* ApodRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApodRequest.swift; sourceTree = "<group>"; };
+		181FFFF9284B665800E4055D /* APODDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODDetailView.swift; sourceTree = "<group>"; };
+		181FFFFF284B6A2900E4055D /* ApodHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApodHomeViewModel.swift; sourceTree = "<group>"; };
+		183BB13B284D0A17001F36EE /* ActivitiyIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiyIndicatorView.swift; sourceTree = "<group>"; };
+		183BB140284D1BAA001F36EE /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +104,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181F0004284B6AB800E4055D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				181F0005284B6AC900E4055D /* ApodResource.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		181F000A284B6AE500E4055D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				181F000C284B6AF900E4055D /* ApodUrls.swift */,
+				181F000B284B6AF900E4055D /* HttpUtility.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		181F0012284B6B0500E4055D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				181F0013284B6B1200E4055D /* Constants.swift */,
+				181F0036284B7C5C00E4055D /* ImageDownloader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		181FFF8D284B54FB00E4055D = {
 			isa = PBXGroup;
 			children = (
+				181F001F284B783000E4055D /* ApodConfig.xcconfig */,
 				181FFF98284B54FB00E4055D /* APODViaNASA */,
 				181FFFAF284B54FD00E4055D /* APODViaNASATests */,
 				181FFFBA284B54FD00E4055D /* APODViaNASAUITests */,
@@ -99,13 +154,18 @@
 		181FFF98284B54FB00E4055D /* APODViaNASA */ = {
 			isa = PBXGroup;
 			children = (
+				181F0012284B6B0500E4055D /* Utilities */,
+				181F000A284B6AE500E4055D /* Services */,
+				181F0004284B6AB800E4055D /* Resource */,
+				181FFFFE284B6A0300E4055D /* ViewModel */,
+				181FFFE9284B5C3900E4055D /* Model */,
+				181FFFE4284B5BD800E4055D /* APOD.json */,
+				181FFFCC284B55F300E4055D /* View */,
 				181FFF99284B54FB00E4055D /* APODViaNASAApp.swift */,
-				181FFF9B284B54FB00E4055D /* ContentView.swift */,
 				181FFF9D284B54FC00E4055D /* Assets.xcassets */,
-				181FFFA2284B54FC00E4055D /* Persistence.swift */,
 				181FFFA7284B54FC00E4055D /* Info.plist */,
-				181FFFA4284B54FC00E4055D /* APODViaNASA.xcdatamodeld */,
 				181FFF9F284B54FC00E4055D /* Preview Content */,
+				181FFFEA284B5C7C00E4055D /* BundleDecoder.swift */,
 			);
 			path = APODViaNASA;
 			sourceTree = "<group>";
@@ -134,6 +194,36 @@
 				181FFFBD284B54FD00E4055D /* Info.plist */,
 			);
 			path = APODViaNASAUITests;
+			sourceTree = "<group>";
+		};
+		181FFFCC284B55F300E4055D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				181FFFD5284B566C00E4055D /* NASA APOD.swift */,
+				181FFFDF284B59A500E4055D /* ApodRow.swift */,
+				181FFFF9284B665800E4055D /* APODDetailView.swift */,
+				181F003B284B7EA000E4055D /* LazyImage.swift */,
+				183BB13B284D0A17001F36EE /* ActivitiyIndicatorView.swift */,
+				183BB140284D1BAA001F36EE /* LoaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		181FFFE9284B5C3900E4055D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				181FFFF3284B5E8D00E4055D /* ApodRequest.swift */,
+				181FFFF2284B5E8D00E4055D /* ApodResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		181FFFFE284B6A0300E4055D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				181FFFFF284B6A2900E4055D /* ApodHomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +329,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F0020284B783000E4055D /* ApodConfig.xcconfig in Resources */,
 				181FFFA1284B54FC00E4055D /* Preview Assets.xcassets in Resources */,
+				181FFFE5284B5BD800E4055D /* APOD.json in Resources */,
 				181FFF9E284B54FC00E4055D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,10 +357,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181FFFA3284B54FC00E4055D /* Persistence.swift in Sources */,
-				181FFF9C284B54FB00E4055D /* ContentView.swift in Sources */,
+				181F000D284B6AF900E4055D /* HttpUtility.swift in Sources */,
+				181F001B284B6B9400E4055D /* ApodHomeViewModel.swift in Sources */,
+				181F0014284B6B1200E4055D /* Constants.swift in Sources */,
+				181FFFFA284B665800E4055D /* APODDetailView.swift in Sources */,
+				181F000E284B6AF900E4055D /* ApodUrls.swift in Sources */,
 				181FFF9A284B54FB00E4055D /* APODViaNASAApp.swift in Sources */,
-				181FFFA6284B54FC00E4055D /* APODViaNASA.xcdatamodeld in Sources */,
+				181F0006284B6AC900E4055D /* ApodResource.swift in Sources */,
+				181FFFF4284B5E8D00E4055D /* ApodResponse.swift in Sources */,
+				181FFFE0284B59A500E4055D /* ApodRow.swift in Sources */,
+				181FFFD6284B566C00E4055D /* NASA APOD.swift in Sources */,
+				181FFFEB284B5C7C00E4055D /* BundleDecoder.swift in Sources */,
+				181F0037284B7C5C00E4055D /* ImageDownloader.swift in Sources */,
+				181F003C284B7EA000E4055D /* LazyImage.swift in Sources */,
+				183BB141284D1BAA001F36EE /* LoaderView.swift in Sources */,
+				183BB13C284D0A17001F36EE /* ActivitiyIndicatorView.swift in Sources */,
+				181FFFF5284B5E8D00E4055D /* ApodRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +471,7 @@
 		};
 		181FFFBF284B54FD00E4055D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181F001F284B783000E4055D /* ApodConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -422,6 +527,7 @@
 		};
 		181FFFC1284B54FD00E4055D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181F001F284B783000E4055D /* ApodConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,6 +549,7 @@
 		};
 		181FFFC2284B54FD00E4055D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181F001F284B783000E4055D /* ApodConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -485,6 +592,7 @@
 		};
 		181FFFC5284B54FD00E4055D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181F001F284B783000E4055D /* ApodConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +633,7 @@
 		};
 		181FFFC8284B54FD00E4055D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181F001F284B783000E4055D /* ApodConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -582,19 +691,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		181FFFA4284B54FC00E4055D /* APODViaNASA.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				181FFFA5284B54FC00E4055D /* APODViaNASA.xcdatamodel */,
-			);
-			currentVersion = 181FFFA5284B54FC00E4055D /* APODViaNASA.xcdatamodel */;
-			path = APODViaNASA.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 181FFF8E284B54FB00E4055D /* Project object */;
 }

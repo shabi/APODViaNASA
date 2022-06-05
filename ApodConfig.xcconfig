@@ -1,0 +1,13 @@
+//
+//  ApodConfig.xcconfig
+//  APODNASA
+//
+//  Created by Shabi Naqvi on 04/06/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APOD_KEY = yE46xdN4j5H7dUZEgxx5s7fC7kiBJJtLA4SNmqAk
+BASE_URL = api.nasa.gov
+
