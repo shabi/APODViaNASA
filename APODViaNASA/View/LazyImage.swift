@@ -10,7 +10,7 @@ import UIKit
 
 
 struct LazyImage: View {
-    static var defaultImage: UIImage = UIImage(named: "no-image-icon")!
+    static var defaultImage: UIImage = UIImage(named: Constants.NoImage)!
     @ObservedObject var imageDownloader: ImageDownloader
     
     init(imageUrl: String) {

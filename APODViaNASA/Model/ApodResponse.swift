@@ -8,7 +8,6 @@
 import Foundation
 
 class ApodResponse : Decodable, ObservableObject {
-//    var id: Int
     @Published var isFavourite: Bool = false
     var date: String
     var title: String
@@ -23,16 +22,13 @@ class ApodResponse : Decodable, ObservableObject {
     
     enum CodingKeys: String, CodingKey {
 
-        //case copyright = "copyright"
         case date = "date"
         case explanation = "explanation"
         case media_type = "media_type"
-        //case service_version = "service_version"
         case title = "title"
         case url = "url"
         case errorCode = "code"
         case msg = "msg"
-//        case id = "id"
     }
     
     init(date:String,title: String,explanation: String,url: String, media_type: String) {

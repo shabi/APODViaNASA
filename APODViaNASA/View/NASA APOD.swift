@@ -13,24 +13,20 @@ struct NASA_APOD: View {
     @State private var startDateSelected: Date = Date()
     @State private var endDateSelected: Date = Date()
     @State private var isalertPresented: Bool = false
+    @State private var showFavouriteOnly: Bool = false
     
     var startDate: Date = Date()
     var endDate: Date = Date()
     
     var body: some View {
         
-        
         NavigationView {            
             ZStack {
-                
-                    
-                
                 VStack {
                     HStack {
                         Text("NASA’s Astronomy picture of the day")
                         Spacer()
                     }.padding()
-                    
                     
                     VStack {
                         DatePicker("Select start date", selection: $startDateSelected, in: ...startDate, displayedComponents:[.date])
@@ -41,6 +37,10 @@ struct NASA_APOD: View {
                     .padding()
                     
                     HStack {
+                        Toggle(isOn: $showFavouriteOnly, label: {
+                            Text("Favourites only")
+                        })
+                        
                         Spacer()
                         Button(action: {
                             if startDateSelected > endDateSelected {
@@ -50,9 +50,9 @@ struct NASA_APOD: View {
                             }
                             
                         }, label: {
-                            Text("Click here to search")
+                            Text("Click here to search").foregroundColor(.white)
                         }).padding(8)
-                        .background(Color.green)
+                        .background(Color("AdaptiveSearchButtonColor"))
                         .cornerRadius(8)
                         .alert(isPresented: $isalertPresented, content: {
                             Alert(title: Text("Start date cannot be after End date"), message: nil, dismissButton: .cancel())
@@ -63,12 +63,13 @@ struct NASA_APOD: View {
                     
                     List {
                         ForEach(apodHomeViewModel.apods, id: \.title) { apod in
-                            NavigationLink(
-                                destination: APODDetailView(apod: apod),
-                                label: {
-                                    ApodRow(apod: apod)
-                                })
-
+                            if !self.showFavouriteOnly || apod.isFavourite {
+                                NavigationLink(
+                                    destination: APODDetailView(apod: apod),
+                                    label: {
+                                        ApodRow(apod: apod)
+                                    })
+                            }
                         }
                     }.navigationBarTitle("NASA’s")
                 }
@@ -76,11 +77,9 @@ struct NASA_APOD: View {
                 LoaderView(tintColor: .red, scaleSize: 3.0, apodHomeViewModel: apodHomeViewModel).hidden(false)
             }
             
-            
-            
         }.onAppear(perform: {
             debugPrint("onAppear")
-            apodHomeViewModel.callApodApi(queryDate: Date())
+            apodHomeViewModel.callApodApi(startDate: startDateSelected, endDate: endDateSelected)
         })
     }
 }

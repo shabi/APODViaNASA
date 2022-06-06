@@ -15,7 +15,7 @@ struct APODDetailView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                        apod.isFavourite.toggle()
+                        apod.isFavourite.toggle()                    
                         }) {
                         if apod.isFavourite {
                             
@@ -34,6 +34,7 @@ struct APODDetailView: View {
             }
             Spacer()
             LazyImage(imageUrl: apod.url).frame(width: 200, height: 200, alignment: .center)
+            Text(apod.date).padding(5)
             Text(apod.explanation)
             Spacer()
         }.padding()

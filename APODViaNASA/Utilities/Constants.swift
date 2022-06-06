@@ -10,19 +10,15 @@ import UIKit
 
 struct Constants {
     
-    static let ErrorAlertTitle = "Error"
-    static let OkAlertTitle = "Ok"
-    static let CancelAlertTitle = "Cancel"
-    static let CalenderImage = "calender"
     static let NoImage = "no-image-icon"
     static let ApodDateFormat = "yyyy-MM-dd"
-    static let MediaTypeImage = "image"
-    static let MediaTypeVideo = "video"
-    static let CachedResponseKey = "CachedResponse"
     static let imageCache = NSCache<AnyObject, UIImage>()
-    enum MediaType {
-        case image
-        case video
+    static let cache = NSCache<AnyObject, AnyObject>()
+    
+    static var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = Constants.ApodDateFormat
+        return formatter
     }
     
     static func getAPIKey() -> String {
@@ -52,22 +48,5 @@ struct Constants {
             }
         }
         return config
-    }
-    
-    static func setFavourite(for key: String) {
-        let favourite = UserDefaults.standard
-        favourite.set(true, forKey: key)
-        favourite.synchronize()
-    }
-    
-    static func getFavourite(for key: String) -> Bool {
-        let favourite = UserDefaults.standard
-        return favourite.bool(forKey: key)
-    }
-    
-    static func removeObjectFavourite(for key: String) {
-        let favourite = UserDefaults.standard
-        favourite.removeObject(forKey:key)
-        favourite.synchronize()
     }
 }

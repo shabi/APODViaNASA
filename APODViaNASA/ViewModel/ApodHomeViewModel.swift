@@ -12,47 +12,6 @@ class ApodHomeViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     private let resource: ApodResource = ApodResource()
-    let cache = NSCache<AnyObject, AnyObject>()
-    
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Constants.ApodDateFormat
-        return formatter
-    }
-    
-    //APOD API Call for One date
-    func callApodApi(queryDate: Date) {
-        let apodRequest = ApodRequest(date: dateFormatter.string(from: queryDate))
-        //Use ApodResource to call API
-        let apodResource = ApodResource()
-        self.isLoading = true
-        apodResource.getApod(apodRequest: apodRequest) { [weak self] (apodApiResponse,error) in
-
-            
-            DispatchQueue.main.async {
-                self?.isLoading = false
-            }
-            //Return the response to view get from apodResource
-            if(error == nil && apodApiResponse != nil) {
-                DispatchQueue.main.async {
-                    self?.apods.append(apodApiResponse!)
-                }
-                
-                //If need to cache all requests
-                self?.cache.setObject(apodApiResponse!, forKey: Constants.CachedResponseKey as NSString)
-            } else {
-
-                DispatchQueue.main.async {
-                    
-                    if let cachedResponse = self?.cache.object(forKey: Constants.CachedResponseKey as NSString), let apodResponse = cachedResponse as? ApodResponse {
-                        // Return Last API Cached Response
-                        self?.apods.removeAll()
-                        self?.apods.append(apodResponse)
-                    }
-                }
-            }
-        }
-    }
     
     
     //APOD API Call for date range
@@ -62,13 +21,20 @@ class ApodHomeViewModel: ObservableObject {
             return
         }
         
-        if startDateValue == endDateValue {
-            callApodApi(queryDate: startDateValue)
+        let dateRangeKeyPath = Constants.dateFormatter.string(from: startDateValue) + Constants.dateFormatter.string(from: endDateValue)
+        
+        //Data Caching for offline support
+        if let cachedApods = Constants.cache.object(forKey: dateRangeKeyPath as AnyObject), let cachedApodArray = cachedApods as? [ApodResponse] {
+            debugPrint("Pods fetched from Cached")
+                self.apods.removeAll()
+            for apod in cachedApodArray {
+                self.apods.append(apod)
+            }
             return
         }
-      
+        
 
-        let apodRequest = ApodRequest(date: dateFormatter.string(from: startDateValue), start_date: dateFormatter.string(from: startDateValue), end_date: dateFormatter.string(from: endDateValue))
+        let apodRequest = ApodRequest(start_date: Constants.dateFormatter.string(from: startDateValue), end_date: Constants.dateFormatter.string(from: endDateValue))
         //Use ApodResource to call API
         let apodResource = ApodResource()
         self.isLoading = true
@@ -86,12 +52,12 @@ class ApodHomeViewModel: ObservableObject {
                 }
 
                 //If need to cache all requests
-                self?.cache.setObject(apodApiResponse! as NSArray, forKey: Constants.CachedResponseKey as NSString)
+                Constants.cache.setObject(apodApiResponse! as NSArray, forKey: dateRangeKeyPath as NSString)
 
             } else {
 
                 DispatchQueue.main.async {
-                    if let cachedResponse = self?.cache.object(forKey: Constants.CachedResponseKey as NSString), let apodArray = cachedResponse as? [ApodResponse] {
+                    if let cachedResponse = Constants.cache.object(forKey: dateRangeKeyPath as NSString), let apodArray = cachedResponse as? [ApodResponse] {
                         // Return Last API Cached Response
                         self?.apods.removeAll()
                         self?.apods.append(contentsOf: apodArray)

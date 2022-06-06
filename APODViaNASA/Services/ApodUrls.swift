@@ -9,15 +9,10 @@ import Foundation
 
 struct ApiEndpoints {
     
-    let apodURL: String
     var apodDateRangeURL: String? = nil
     
-    init(date:String, startDate: String? = nil, endDate: String? = nil) {
-        self.apodURL = "https://\(Constants.getApodBaseURL())/planetary/apod?api_key=\(Constants.getAPIKey())&date=\(date)"
-        
-        if let startDateValue = startDate, let endDateValue = endDate {
-            self.apodDateRangeURL = "https://\(Constants.getApodBaseURL())/planetary/apod?api_key=\(Constants.getAPIKey())&start_date=\(startDateValue)&end_date=\(endDateValue)"
-        }
+    init(startDate: String, endDate: String) {
+        self.apodDateRangeURL = "https://\(Constants.getApodBaseURL())/planetary/apod?api_key=\(Constants.getAPIKey())&start_date=\(startDate)&end_date=\(endDate)"
     }
     
 }
